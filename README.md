@@ -38,3 +38,79 @@ LangGraph Multi-Agent Workflow
        │
        ▼
 Interactive Report + PDF Generator (ReportLab)
+
+🛠️ Tech Stack
+Frontend: Streamlit
+
+Agent Framework: LangGraph, LangChain
+
+LLM Provider: Groq API (openai/gpt-oss-20b / llama-3.3-70b-versatile)
+
+Web Search Engine: Tavily Search API
+
+Vector Store: ChromaDB
+
+Audio Processing: SpeechRecognition
+
+Document Generation: ReportLab
+
+Version Control & Hosting: Git, GitHub, Streamlit Cloud
+
+📁 Repository Structure
+Plaintext
+├── app.py              # Streamlit Web Application Interface & Session Sync
+├── agents.py           # LangGraph Multi-Agent Nodes & State Definition
+├── tools.py            # Tavily Search Tool & Web Scraper Utilities
+├── rag.py              # ChromaDB Initialization & Vector RAG Pipeline
+├── requirements.txt    # Python Dependencies
+├── packages.txt        # Linux System Dependencies (for Cloud Build)
+├── .gitignore          # Excluded Files (.env, venv, chroma_db, PDFs)
+└── README.md           # Project Documentation
+🚀 Quickstart Guide
+1. Prerequisites
+Ensure you have Python 3.10 or higher installed on your machine.
+
+2. Clone Repository
+Bash
+git clone [https://github.com/YOUR_GITHUB_USERNAME/agentic-market-analysis.git](https://github.com/YOUR_GITHUB_USERNAME/agentic-market-analysis.git)
+cd agentic-market-analysis
+3. Set Up Virtual Environment
+Bash
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# Mac/Linux
+python3 -m venv venv
+source venv/bin/activate
+4. Install Dependencies
+Bash
+pip install -r requirements.txt
+5. Environment Variables Setup
+Create a .env file in the root directory and add your API keys:
+
+Code snippet
+GROQ_API_KEY=your_groq_api_key_here
+TAVILY_API_KEY=your_tavily_api_key_here
+6. Run Application Locally
+Bash
+streamlit run app.py
+☁️ Streamlit Cloud Deployment
+Push your repository to GitHub.   
+logs-balavenkatesh-vt-bv-s-agentic_ai_powered-live_market-analysis-main-app.py-2026-10-31T16_33_04.117Z.txt
+
+Visit share.streamlit.io and log in with GitHub.   
+logs-balavenkatesh-vt-bv-s-agentic_ai_powered-live_market-analysis-main-app.py-2026-10-31T16_33_04.117Z.txt
+
+Click Create app and select your repository, branch (main), and file (app.py).   
+logs-balavenkatesh-vt-bv-s-agentic_ai_powered-live_market-analysis-main-app.py-2026-10-31T16_33_04.117Z.txt
+
+Under Advanced Settings ➔ Secrets, paste your API keys:
+
+Ini, TOML
+GROQ_API_KEY = "your_groq_api_key_here"
+TAVILY_API_KEY = "your_tavily_api_key_here"
+Click Deploy!
+
+📜 License
+This project is open-source and available under the MIT License.
